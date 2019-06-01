@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<style>
+			body{
+				position:relative;
+			}
+			h3{
+				width: 100%;
+				height: 60px;
+				line-height: 60px;
+				font-family: "微软雅黑";
+				font-size: 40px;
+				text-align: center;	
+			}
+			#good,#no_good{
+				width: 80px;
+				height: 30px;
+				line-height: 30px;
+				color: beige;
+				border: 0px;
+				text-align: center;
+				
+				
+			}
+			#good{
+				position: absolute;
+				background-color: green;
+				left: 500px;
+			}
+			#no_good{
+				position: absolute;
+				background-color: red;
+				left:750px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<h3>做我女朋友好不好?</h3>
+		<button id="good">好</button>
+		<button id="no_good">不好</button>
+		<script>
+			let btn = document.getElementById("no_good");
+			btn1 = document.getElementById("good");
+			btn.onmousedown = function(){
+				var obj = Math.random()*1200+1;
+				var obj1 = Math.random()*400+1;
+				this.style.left=obj+"px";
+				this.style.top=obj1+"px";
+			}
+			btn1.onmousedown = function(){
+				alert("亲爱的，我就知道的！");
+			}
+		</script>
+	</body>
+	
+</html>
